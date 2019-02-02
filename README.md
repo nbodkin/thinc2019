@@ -1,1 +1,3 @@
-# thinc2019
+# THInC Hackathon Project
+
+Blaire Zhang and Nico Bodkin
