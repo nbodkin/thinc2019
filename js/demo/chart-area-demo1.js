@@ -28,13 +28,14 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-var ctx = document.getElementById("myAreaChart");
+// Area Chart Example
+var ctx = document.getElementById("myAreaChart1");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ["2009", "2010", "2011", "2012", "2013", "2015", "2016", "2017", "2018", "2019"],
     datasets: [{
-      label: "A1C Level",
+      label: "Cholesterol Level",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "#858796",
@@ -46,7 +47,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [5.11, 5.88, 6.02, 6.37, 6.54, 6.2, 6.52, 6.96, 7.24, 7.5],
+      data: [215,210,212,215,220,222,229, 225, 230, 231],
     }],
   },
   options: {
@@ -78,7 +79,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return  number_format(value) + '%';
+            return  number_format(value) + 'mmol/L';
           }
         },
         gridLines: {
@@ -110,10 +111,9 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel, 2) + '%';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel, 2) + 'mmol/L';
         }
       }
     }
   }
 });
-
