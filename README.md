@@ -1,3 +1,3 @@
 # THInC Hackathon Project
 
-Blaire Zhang and Nico Bodkin
+Blaire Zhang and Alan Ma
